@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+div:target {
+   display: block;
+}
+/* style.css */
+a[href="#fintech"]:has(~ #fintech:target),
+a[href="#-ecommerce"]:has(~ #e-commerce:target),
+a[href="#healthcare"]:has(~ #healthcare:target) {
+   color: #fdfdfd; /* orange-500 */
+   border-left-color: #ff623e;
+}
