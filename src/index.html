@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +19,12 @@
          }
       </style>
    </head>
-   <body class="bg-black text-[#FDFDFD] transition-all duration-150">
+   <body
+      class="bg-white dark:bg-black text-black dark:text-[#FDFDFD] transition-all duration-150"
+   >
       <!-- START HEADER SECTION -->
       <header
-         class="w-full fixed top-0 left-0 flex items-center justify-between px-6 sm:px-12 md:px-24 xl:px-32 z-20 py-4 md:py-6 xl:py-8 bg-black/50 backdrop-blur-sm"
+         class="w-full fixed top-0 left-0 flex items-center justify-between px-6 sm:px-12 md:px-24 xl:px-32 z-20 py-4 md:py-6 xl:py-8 bg-white/50 dark:bg-black/50 backdrop-blur-sm"
       >
          <!-- LOGO -->
          <span class="flex items-center gap-4">
@@ -32,22 +34,78 @@
 
          <!-- NAVS -->
          <nav class="font-semibold hidden lg:flex items-center gap-2 lg:gap-12">
-            <a href="#">About</a>
-            <a href="#">Service</a>
-            <a href="#">Projects</a>
-            <a href="#">Testimonials</a>
-            <a href="#">FAQ</a>
+            <a href="#about">About</a>
+            <a href="#services">Service</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
          </nav>
 
          <!-- CTA -->
          <a
-            href="#"
-            class="bg-[#FF623E] text-nowrap py-3 px-8 xl:px-16 hidden lg:flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)]"
+            href="#contact"
+            class="bg-[#FF623E] text-white text-nowrap py-3 px-8 xl:px-16 hidden lg:flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)]"
             >Let's Talk</a
          >
 
          <!-- HAMBURGER -->
-         <img src="assets/images/menu-01.png" alt="menu" class="lg:hidden" />
+         <img
+            src="assets/images/menu-01.png"
+            alt="menu"
+            class="dark:max-lg:inline-block peer cursor-pointer lg:hidden"
+            tabindex="0"
+         />
+         <img
+            src="assets/images/menu-01-black.png"
+            alt="menu"
+            class="lg:hidden dark:hidden peer cursor-pointer"
+            tabindex="0"
+         />
+         <div
+            class="lg:hidden fixed w-screen h-screen top-0 left-full peer-focus:-translate-x-full bg-white dark:bg-black z-30 text-white transition-all durationn-150"
+         >
+            <div
+               class="py-4 md:py-6 w-full flex items-center justify-between px-6 sm:px-12 md:px-24"
+            >
+               <!-- LOGO -->
+               <span class="flex items-center gap-4">
+                  <img src="assets/images/logo-symbol.png" alt="logo" />
+                  <h4 class="font-bold text-lg md:text-xl xl:text-2xl">
+                     Your Logo
+                  </h4>
+               </span>
+
+               <img
+                  src="assets/images/x-close.png"
+                  alt=""
+                  class="hidden dark:inline-block cursor-pointer"
+               />
+               <img
+                  src="assets/images/x-close-black.png"
+                  alt=""
+                  class="dark:hidden cursor-pointer"
+               />
+            </div>
+
+            <!-- NAVS -->
+            <nav
+               class="mt-8 w-full font-semibold flex flex-col items-start gap-10 px-6 sm:px-12 md:px-24"
+            >
+               <a href="#about">About</a>
+               <a href="#services">Service</a>
+               <a href="#projects">Projects</a>
+               <a href="#testimonials">Testimonials</a>
+               <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="px-6 sm:px-12 md:px-24">
+               <a
+                  href="#contact"
+                  class="z-10 bg-[#FF623E] text-white text-nowrap py-3 px-8 xl:px-16 flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)] lg:w-3xs mt-8 md:mt-10 xl:mt-12"
+                  >Let's Talk</a
+               >
+            </div>
+         </div>
       </header>
       <!-- END HEADER SECTION -->
 
@@ -55,6 +113,7 @@
          <!-- START HERO SECTION -->
 
          <section
+            id="about"
             class="w-screen pt-40 md:pt-56 xl:pt-64 flex flex-col justify-center px-6 sm:px-12 md:px-24 xl:px-32 relative z-10 lg:bg-none"
          >
             <span class="flex flex-col gap-4">
@@ -74,8 +133,8 @@
                </h5>
             </span>
             <a
-               href="#"
-               class="z-10 bg-[#FF623E] text-nowrap py-3 px-8 xl:px-16 flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)] lg:w-3xs mt-8 md:mt-10 xl:mt-12"
+               href="#contact"
+               class="z-10 bg-[#FF623E] text-white text-nowrap py-3 px-8 xl:px-16 flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)] lg:w-3xs mt-8 md:mt-10 xl:mt-12"
                >Let's Talk</a
             >
             <!-- <img
@@ -87,8 +146,14 @@
          <img
             src="assets/images/hero-img.png"
             alt="hero-img"
-            class="lg:absolute top-0 right-0 max-lg:w-full relative z-0"
+            class="lg:absolute top-0 right-0 max-lg:w-full relative z-0 hidden dark:inline-block"
          />
+         <img
+            src="assets/images/hero-img-light.png"
+            alt="hero-img"
+            class="lg:absolute top-0 right-0 max-lg:w-full relative z-0 dark:hidden inline-block"
+         />
+
          <!-- END HERO SECTION -->
 
          <!-- START TRUSTED SECTION -->
@@ -101,8 +166,11 @@
                Trusted by Global Innovators & Leading Brands
             </h5>
             <div
-               class="w-screen flex items-center justify-center shadow-[inset_0px_5px_15px_-3px_rgba(0,_0,_0,_1)] py-16"
+               class="relative w-screen flex items-center justify-center py-16 overflow-x-scroll"
             >
+               <div
+                  class="w-full h-full absolute top-0 left-0 shadow-[inset_0px_0px_100px_50px_rgba(255,255,255,1)] dark:shadow-[inset_0px_0px_100px_50px_rgba(0,0,0,1)] z-10"
+               ></div>
                <img
                   src="assets/images/company_brands.png"
                   alt=""
@@ -133,7 +201,7 @@
             >
                <div class="w-full flex justify-center">
                   <span
-                     class="rounded-full flex flex-col items-center justify-center bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
+                     class="rounded-full flex flex-col items-center justify-center bg-[#FAFAFA] dark:bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
                   >
                      <h2
                         class="font-bold text-[#FF623E] text-3xl md:text-4xl xl:text-5xl"
@@ -149,7 +217,7 @@
                </div>
                <div class="w-full flex justify-center">
                   <span
-                     class="rounded-full flex flex-col items-center justify-center bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
+                     class="rounded-full flex flex-col items-center justify-center bg-[#FAFAFA] dark:bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
                   >
                      <h2
                         class="font-bold text-[#FF623E] text-3xl md:text-4xl xl:text-5xl"
@@ -165,7 +233,7 @@
                </div>
                <div class="w-full flex justify-center">
                   <span
-                     class="rounded-full flex flex-col items-center justify-center bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
+                     class="rounded-full flex flex-col items-center justify-center bg-[#FAFAFA] dark:bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
                   >
                      <h2
                         class="font-bold text-[#FF623E] text-3xl md:text-4xl xl:text-5xl"
@@ -181,7 +249,7 @@
                </div>
                <div class="w-full flex justify-center">
                   <span
-                     class="rounded-full flex flex-col items-center justify-center bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
+                     class="rounded-full flex flex-col items-center justify-center bg-[#FAFAFA] dark:bg-neutral-900 size-40 md:size-52 xl:size-60 col-span-1"
                   >
                      <h2
                         class="font-bold text-[#FF623E] text-3xl md:text-4xl xl:text-5xl"
@@ -216,9 +284,11 @@
 
             <div class="mt-24 flex flex-col gap-6 w-full h-full relative">
                <div
-                  class="lg:border-l-[1px] border-neutral-800 h-[80%] absolute top-1/2 -translate-y-1/2 max-lg:w-12 lg:left-1/2 z-0 flex justify-center"
+                  class="lg:border-l-[1px] border-[#DFDFDF] dark:border-neutral-800 h-[80%] absolute top-1/2 -translate-y-1/2 max-lg:w-12 lg:left-1/2 z-0 flex justify-center"
                >
-                  <div class="h-full w-[1px] bg-neutral-800"></div>
+                  <div
+                     class="h-full w-[1px] bg-[#DFDFDF] dark:bg-neutral-800"
+                  ></div>
                </div>
 
                <!-- STEP LIST ITEM 1 -->
@@ -227,7 +297,7 @@
                      class="flex max-lg:flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -248,7 +318,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         1
                      </span>
@@ -261,7 +331,7 @@
                      class="flex flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -282,7 +352,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         2
                      </span>
@@ -295,7 +365,7 @@
                      class="flex max-lg:flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -316,7 +386,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         3
                      </span>
@@ -329,7 +399,7 @@
                      class="flex flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -350,7 +420,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         4
                      </span>
@@ -363,7 +433,7 @@
                      class="flex max-lg:flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -384,7 +454,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         5
                      </span>
@@ -397,7 +467,7 @@
                      class="flex flex-row-reverse items-center justify-between gap-6 w-full col-span-1"
                   >
                      <div
-                        class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 p-4 w-full"
+                        class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DEDCDC] dark:border-neutral-900 p-4 w-full"
                      >
                         <div class="flex w-full">
                            <div
@@ -418,7 +488,7 @@
                         </div>
                      </div>
                      <span
-                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full bg-[#FF623E] flex items-center justify-center"
+                        class="relative z-10 h-12 w-14 lg:w-28 font-bold rounded-full text-white bg-[#FF623E] flex items-center justify-center"
                      >
                         6
                      </span>
@@ -431,6 +501,7 @@
 
          <!-- START SERVICES SECTION -->
          <section
+            id="services"
             class="w-screen px-6 sm:px-12 md:px-24 xl:px-32 flex flex-col items-center justify-center py-12 md:py-40"
          >
             <h2
@@ -449,7 +520,7 @@
             >
                <!-- SERVICE 1 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/web-development.png"
@@ -471,7 +542,7 @@
                </div>
                <!-- SERVICE 2 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/app-development.png"
@@ -493,7 +564,7 @@
                </div>
                <!-- SERVICE 3 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/ui-ux-design.png"
@@ -515,7 +586,7 @@
                </div>
                <!-- SERVICE 4 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/cloud-solutions.png"
@@ -538,7 +609,7 @@
                </div>
                <!-- SERVICE 5 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/software-development.png"
@@ -560,7 +631,7 @@
                </div>
                <!-- SERVICE 6 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/web-development.png"
@@ -582,7 +653,7 @@
                </div>
                <!-- SERVICE 7 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/cyber-security-services.png"
@@ -604,7 +675,7 @@
                </div>
                <!-- SERVICE 8 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/qa-solutions.png"
@@ -626,7 +697,7 @@
                </div>
                <!-- SERVICE 9 -->
                <div
-                  class="bg-neutral-950 border-[1px] rounded-2xl border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
+                  class="bg-[#FAFAFA] dark:bg-neutral-950 border-[1px] rounded-2xl border-[#DFDFDF] dark:border-neutral-900 px-4 pb-4 pt-12 w-full relative col-span-1"
                >
                   <img
                      src="assets/images/it-consulting-support.png"
@@ -767,13 +838,14 @@
 
          <!-- START PROJECTS SECTION -->
          <section
+            id="projects"
             class="w-screen px-6 sm:px-12 md:px-24 xl:px-32 flex flex-col items-center justify-center py-12 md:py-40"
          >
             <div class="flex max-lg:flex-col items-center justify-center">
                <h2
                   class="z-10 text-3xl md:text-4xl xl:text-5xl font-bold text-center"
                >
-                  From Vision to Launch!
+                  From Vision to Launch! &nbsp;
                </h2>
                <h2
                   class="z-10 text-3xl md:text-4xl xl:text-5xl font-bold text-center"
@@ -845,6 +917,7 @@
 
          <!-- START TESTIMONIALS SECTION -->
          <section
+            id="testimonials"
             class="w-screen px-6 flex flex-col items-center justify-center py-12 md:py-40"
          >
             <h2
@@ -859,14 +932,36 @@
             </h5>
 
             <div
-               class="mt-8 lg:pl-[140vh] lg:mt-24 w-full h-full relative flex items-center justify-center gap-16 py-24 overflow-x-scroll"
+               class="mt-8 lg:mt-24 w-full h-full relative flex items-center justify-center gap-16 py-24 overflow-hidden"
             >
-               <!-- TESTIMONIAL CARD -->
                <div
-                  class="bg-gradient-to-br from-[#FF623E]/50 to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
+                  class="w-full h-full absolute top-0 left-0 shadow-[inset_0px_0px_200px_50px_rgba(255,255,255,1)] dark:shadow-[inset_0px_0px_200px_50px_rgba(0,0,0,1)] z-10"
+               ></div>
+
+               <div
+                  class="h-full w-full flex flex-row-reverse justify-center items-end gap-2 absolute top-0 left-0"
                >
                   <div
-                     class="bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
+                     class="bg-[#FAFAFA] dark:bg-neutral-500 text-black rounded-full w-2 h-2"
+                  >
+                     A
+                  </div>
+                  <div class="bg-[#FF623E] text-black rounded-full w-2 h-2">
+                     A
+                  </div>
+                  <div
+                     class="bg-[#FAFAFA] dark:bg-neutral-500 text-black rounded-full w-2 h-2"
+                  >
+                     A
+                  </div>
+               </div>
+
+               <!-- TESTIMONIAL CARD -->
+               <div
+                  class="bg-gradient-to-br from-[#FF623E]/50 to-[#DFDFDF] dark:to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
+               >
+                  <div
+                     class="bg-[#FAFAFA] dark:bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
                   >
                      <img
                         src="assets/images/double-quotes.png"
@@ -902,10 +997,10 @@
                </div>
                <!-- TESTIMONIAL CARD -->
                <div
-                  class="bg-gradient-to-br from-[#FF623E]/50 to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
+                  class="bg-gradient-to-br from-[#FF623E]/50 to-[#DFDFDF] dark:to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
                >
                   <div
-                     class="bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
+                     class="bg-[#FAFAFA] dark:bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
                   >
                      <img
                         src="assets/images/double-quotes.png"
@@ -941,10 +1036,10 @@
                </div>
                <!-- TESTIMONIAL CARD -->
                <div
-                  class="bg-gradient-to-br from-[#FF623E]/50 to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
+                  class="bg-gradient-to-br from-[#FF623E]/50 to-[#DFDFDF] dark:to-neutral-800/80 p-[1px] shadow-lg rounded-2xl min-w-[90vw] md:min-w-[70vw] lg:min-w-[60vw] xl:min-w-[55vw] backdrop-blur-3xl backdrop-brightness-50"
                >
                   <div
-                     class="bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
+                     class="bg-[#FAFAFA] dark:bg-neutral-950 flex flex-col items-center justify-center pt-8 pb-20 px-4 rounded-2xl relative"
                   >
                      <img
                         src="assets/images/double-quotes.png"
@@ -984,10 +1079,11 @@
 
          <!-- START FAQ SECTION -->
          <section
+            id="faq"
             class="w-screen px-6 sm:px-12 md:px-24 xl:px-32 flex flex-col items-center justify-center py-12 md:py-40"
          >
             <div
-               class="w-full justify-between py-12 border-b-[1px] border-neutral-800"
+               class="w-full justify-between py-12 border-b-[1px] border-[#DFDFDF] dark:border-neutral-800"
             >
                <div class="flex lg:flex-col w-full">
                   <h2
@@ -1021,7 +1117,7 @@
                <div class="col-span-3 flex flex-col w-full pt-8">
                   <!-- FAQ ITEM 1 -->
                   <div
-                     class="w-full group py-8 border-b-[1px] border-neutral-800"
+                     class="w-full group py-8 border-b-[1px] border-[#DFDFDF] dark:border-neutral-800"
                      tabindex="0"
                   >
                      <div class="w-full flex items-center justify-between">
@@ -1035,12 +1131,22 @@
                         <img
                            src="assets/images/plus.png"
                            alt=""
-                           class="group-focus:hidden"
+                           class="group-focus:hidden hidden dark:inline-block"
                         />
                         <img
                            src="assets/images/dash.png"
                            alt=""
-                           class="hidden group-focus:inline-block"
+                           class="hidden group-focus:inline-block dark:hidden"
+                        />
+                        <img
+                           src="assets/images/plus-dark.png"
+                           alt=""
+                           class="group-focus:hidden dark:hidden"
+                        />
+                        <img
+                           src="assets/images/dash-black.png"
+                           alt=""
+                           class="group-focus:inline-block hidden dark:inline-block"
                         />
                      </div>
                      <div
@@ -1056,7 +1162,7 @@
                   </div>
                   <!-- FAQ ITEM 2 -->
                   <div
-                     class="w-full group py-8 border-b-[1px] border-neutral-800"
+                     class="w-full group py-8 border-b-[1px] border-[#DFDFDF] dark:border-neutral-800"
                      tabindex="0"
                   >
                      <div class="w-full flex items-center justify-between">
@@ -1070,12 +1176,22 @@
                         <img
                            src="assets/images/plus.png"
                            alt=""
-                           class="group-focus:hidden"
+                           class="group-focus:hidden hidden dark:inline-block"
                         />
                         <img
                            src="assets/images/dash.png"
                            alt=""
-                           class="hidden group-focus:inline-block"
+                           class="hidden group-focus:inline-block dark:hidden"
+                        />
+                        <img
+                           src="assets/images/plus-dark.png"
+                           alt=""
+                           class="group-focus:hidden dark:hidden"
+                        />
+                        <img
+                           src="assets/images/dash-black.png"
+                           alt=""
+                           class="group-focus:inline-block hidden dark:inline-block"
                         />
                      </div>
                      <div
@@ -1091,7 +1207,7 @@
                   </div>
                   <!-- FAQ ITEM 3 -->
                   <div
-                     class="w-full group py-8 border-b-[1px] border-neutral-800"
+                     class="w-full group py-8 border-b-[1px] border-[#DFDFDF] dark:border-neutral-800"
                      tabindex="0"
                   >
                      <div class="w-full flex items-center justify-between">
@@ -1105,12 +1221,22 @@
                         <img
                            src="assets/images/plus.png"
                            alt=""
-                           class="group-focus:hidden"
+                           class="group-focus:hidden hidden dark:inline-block"
                         />
                         <img
                            src="assets/images/dash.png"
                            alt=""
-                           class="hidden group-focus:inline-block"
+                           class="hidden group-focus:inline-block dark:hidden"
+                        />
+                        <img
+                           src="assets/images/plus-dark.png"
+                           alt=""
+                           class="group-focus:hidden dark:hidden"
+                        />
+                        <img
+                           src="assets/images/dash-black.png"
+                           alt=""
+                           class="group-focus:inline-block hidden dark:inline-block"
                         />
                      </div>
                      <div
@@ -1126,7 +1252,7 @@
                   </div>
                   <!-- FAQ ITEM 4 -->
                   <div
-                     class="w-full group py-8 border-b-[1px] border-neutral-800"
+                     class="w-full group py-8 border-b-[1px] border-[#DFDFDF] dark:border-neutral-800"
                      tabindex="0"
                   >
                      <div class="w-full flex items-center justify-between">
@@ -1140,12 +1266,22 @@
                         <img
                            src="assets/images/plus.png"
                            alt=""
-                           class="group-focus:hidden"
+                           class="group-focus:hidden hidden dark:inline-block"
                         />
                         <img
                            src="assets/images/dash.png"
                            alt=""
-                           class="hidden group-focus:inline-block"
+                           class="hidden group-focus:inline-block dark:hidden"
+                        />
+                        <img
+                           src="assets/images/plus-dark.png"
+                           alt=""
+                           class="group-focus:hidden dark:hidden"
+                        />
+                        <img
+                           src="assets/images/dash-black.png"
+                           alt=""
+                           class="group-focus:inline-block hidden dark:inline-block"
                         />
                      </div>
                      <div
@@ -1172,12 +1308,22 @@
                         <img
                            src="assets/images/plus.png"
                            alt=""
-                           class="group-focus:hidden"
+                           class="group-focus:hidden hidden dark:inline-block"
                         />
                         <img
                            src="assets/images/dash.png"
                            alt=""
-                           class="hidden group-focus:inline-block"
+                           class="hidden group-focus:inline-block dark:hidden"
+                        />
+                        <img
+                           src="assets/images/plus-dark.png"
+                           alt=""
+                           class="group-focus:hidden dark:hidden"
+                        />
+                        <img
+                           src="assets/images/dash-black.png"
+                           alt=""
+                           class="group-focus:inline-block hidden dark:inline-block"
                         />
                      </div>
                      <div
@@ -1193,7 +1339,7 @@
                   </div>
                </div>
                <div
-                  class="col-span-1 rounded-xl bg-[#CC4E32] w-full p-4 flex flex-col justify-between lg:h-[70%]"
+                  class="col-span-1 rounded-xl text-white bg-[#CC4E32] w-full p-4 flex flex-col justify-between lg:h-[70%]"
                >
                   <div class="w-full">
                      <h4 class="text-lg md:text-xl xl:text-2xl font-bold mt-2">
@@ -1212,9 +1358,11 @@
                         class="object-cover"
                      />
                   </div>
-                  <button class="w-full bg-white rounded-full mt-4 lg:mt-6 p-2">
+                  <button
+                     class="w-full bg-black dark:bg-white rounded-full mt-4 lg:mt-6 p-2"
+                  >
                      <p
-                        class="text-sm md:text-base xl:text-lg font-semibold text-black"
+                        class="text-sm md:text-base xl:text-lg font-semibold text-white dark:text-black"
                      >
                         Free Consultation
                      </p>
@@ -1226,6 +1374,7 @@
 
          <!-- START CONTACT SECTION -->
          <section
+            id="contact"
             class="w-screen px-6 flex flex-col items-center justify-center py-12 md:py-40"
          >
             <h2
@@ -1247,7 +1396,7 @@
                      id="name"
                      type="text"
                      placeholder="Enter your name"
-                     class="border-[1px] border-neutral-800 rounded-xl p-4"
+                     class="border-[1px] border-[#DFDFDF] dark:border-neutral-800 rounded-xl p-4"
                   />
                </div>
                <div class="w-full flex flex-col gap-2 mt-4">
@@ -1257,7 +1406,7 @@
                      id="email"
                      type="email"
                      placeholder="Enter your email"
-                     class="border-[1px] border-neutral-800 rounded-xl p-4"
+                     class="border-[1px] border-[#DFDFDF] dark:border-neutral-800 rounded-xl p-4"
                   />
                </div>
                <div class="w-full flex flex-col gap-2 mt-4">
@@ -1268,7 +1417,7 @@
                      id="message"
                      type="text"
                      placeholder="Enter your message"
-                     class="border-[1px] border-neutral-800 rounded-xl p-4"
+                     class="border-[1px] border-[#DFDFDF] dark:border-neutral-800 rounded-xl p-4"
                   ></textarea>
                </div>
                <div class="w-full flex flex-col gap-2 mt-4">
@@ -1284,7 +1433,7 @@
                               name="service"
                               id="web-development"
                               value="web-development"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1303,7 +1452,7 @@
                               name="service"
                               id="app-development"
                               value="app-development"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1322,7 +1471,7 @@
                               name="service"
                               id="ui-ux-design"
                               value="ui-ux-design"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1341,7 +1490,7 @@
                               name="service"
                               id="cloud-solutions"
                               value="cloud-solutions"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1360,7 +1509,7 @@
                               name="service"
                               id="software-development"
                               value="software-development"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1379,7 +1528,7 @@
                               name="service"
                               id="other"
                               value="other"
-                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-neutral-800 checked:bg-[#CC4E32]"
+                              class="peer appearance-none bg-transparent size-6 border-[1px] rounded-sm border-[#DFDFDF] dark:border-neutral-800 checked:bg-[#CC4E32]"
                            />
 
                            <span
@@ -1391,7 +1540,7 @@
                   </ul>
                </div>
                <button
-                  class="z-10 bg-[#FF623E] text-nowrap py-3 px-8 xl:px-16 flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)] mt-8 md:mt-10 xl:mt-12 w-full"
+                  class="z-10 text-white bg-[#FF623E] text-nowrap py-3 px-8 xl:px-16 flex items-center justify-center rounded-full font-bold shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)] mt-8 md:mt-10 xl:mt-12 w-full"
                >
                   Send
                </button>
@@ -1400,10 +1549,10 @@
          <!-- END CONTACT SECTION -->
       </main>
       <footer
-         class="w-full flex items-center px-6 sm:px-12 md:px-24 xl:px-32 z-20 py-4 md:py-6 xl:py-8 bg-black"
+         class="w-full flex items-center px-6 sm:px-12 md:px-24 xl:px-32 z-20 py-4 md:py-6 xl:py-8 bg-white dark:bg-black"
       >
          <div
-            class="w-full p-8 bg-neutral-950 flex flex-col gap-8 lg:gap-24 border-neutral-800 rounded-2xl"
+            class="w-full p-8 bg-[#FAFAFA] dark:bg-neutral-950 flex flex-col gap-8 lg:gap-24 border-[#DFDFDF] dark:border-neutral-800 rounded-2xl"
          >
             <div
                class="w-full flex max-lg:flex-col-reverse max-lg:gap-8 items-start lg:justify-between"
@@ -1427,7 +1576,7 @@
                   </h4>
                </span>
             </div>
-            <hr class="border-neutral-800 w-full" />
+            <hr class="border-[#DFDFDF] dark:border-neutral-800 w-full" />
             <div
                class="w-full flex max-lg:flex-col items-start lg:justify-between"
             >
@@ -1452,10 +1601,46 @@
                   >
                </nav>
                <span class="flex items-center gap-2 max-lg:mt-16 lg:gap-4">
-                  <img src="assets/images/facebook.png" alt="" />
-                  <img src="assets/images/instagram.png" alt="" />
-                  <img src="assets/images/linkedin.png" alt="" />
-                  <img src="assets/images/tiktok.png" alt="" />
+                  <img
+                     src="assets/images/facebook-black.png"
+                     alt=""
+                     class="dark:hidden"
+                  />
+                  <img
+                     src="assets/images/instagram-black.png"
+                     alt=""
+                     class="dark:hidden"
+                  />
+                  <img
+                     src="assets/images/linkedin-black.png"
+                     alt=""
+                     class="dark:hidden"
+                  />
+                  <img
+                     src="assets/images/tiktok-black.png"
+                     alt=""
+                     class="dark:hidden"
+                  />
+                  <img
+                     src="assets/images/facebook.png"
+                     alt=""
+                     class="hidden dark:inline-block"
+                  />
+                  <img
+                     src="assets/images/instagram.png"
+                     alt=""
+                     class="hidden dark:inline-block"
+                  />
+                  <img
+                     src="assets/images/linkedin.png"
+                     alt=""
+                     class="hidden dark:inline-block"
+                  />
+                  <img
+                     src="assets/images/tiktok.png"
+                     alt=""
+                     class="hidden dark:inline-block"
+                  />
                </span>
             </div>
          </div>
